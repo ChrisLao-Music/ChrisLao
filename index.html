@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+  <title>Chris | Music Official Site</title>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1>Chris Lao </h1>
+      <p class="tagline">Filipino singer‑songwriter with heartfelt acoustic songs about love and life.</p>
+
+      <nav aria-label="Primary" class="main-nav">
+        <a href="#home" data-tab="home">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Music ▾</button>
+          <div class="dropdown-content" role="menu" aria-label="Music tracks">
+            <a href="#music" data-action="music-lang" data-lang="tagalog" role="menuitem">Tagalog Songs</a>
+            <a href="#music" data-action="music-lang" data-lang="english" role="menuitem">English Songs</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Lyrics &amp; Chords ▾</button>
+          <div class="dropdown-content" role="menu" aria-label="Lyrics language">
+            <a href="#lyrics" data-tab="lyrics" data-lang="tagalog" role="menuitem">Tagalog</a>
+            <a href="#lyrics" data-tab="lyrics" data-lang="english" role="menuitem">English</a>
+          </div>
+        </div>
+
+        <a href="#updates" data-tab="updates">Updates</a>
+        <a href="#contact" data-tab="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="tab-section" role="region" aria-labelledby="home">
+        <h2>Welcome</h2>
+        <p>Welcome to the official website of <strong>Chris Lao</strong> — a Filipino singer-songwriter whose acoustic melodies capture the essence of love and life. Here you can listen to his songs, read lyrics with chords, and follow his latest updates.</p>
+      </section>
+
+      <section id="music" class="tab-section" role="region" aria-labelledby="music" hidden>
+        <h2>Music</h2>
+
+        <div class="track-list">
+        <p class="track-title" id="track-title">Select a language from the Music menu</p>
+
+          <!-- list of tracks will be generated here -->
+          <div id="music-list" aria-live="polite"></div>
+
+          <!-- single audio player; src is set by app.js -->
+          <audio id="player" controls>
+            <source id="player-source" src="Mahal Pa Rin Kita.mp3" type="audio/mpeg">
+            <source id="player-source" src="Kung Pwede Lang.mp3" type="audio/mpeg">
+            <source id="player-source" src="I Still Love You.mp3" type="audio/mpeg">
+            <source id="player-source" src="If Only I Could.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <p>More songs coming soon...</p>
+      </section>
+
+      <section id="lyrics" class="tab-section" role="region" aria-labelledby="lyrics" hidden>
+        <h2>Lyrics & Chords</h2>
+        <div class="lyrics">
+          <div id="lyrics-tagalog">
+            <h3>Mahal Pa Rin Kita (Tagalog Version)</h3>
+            <pre>Intro: C Am F G x2 
+Strumming Pattern: D D U U D U
+
+[Verse 1]
+C
+Akala ko noon, ako'y may pag-asa
+Am
+Ngunit tinapos mo sa isang salita
+F
+Ang mga pangarap kong para sa'tin
+G
+Biglang naglaho, parang hangin
+
+[Pre-Chorus]
+Em Am
+Ngunit bakit hanggang ngayon
+F G
+Ikaw pa rin ang laman ng bawat tanong
+
+[Chorus]
+C
+Mahal pa rin kita, kahit di mo na ako
+Am
+Kahit ‘di mo ramdam, puso ko’y totoo
+F
+Kahit tinanggihan, ‘di ko kayang limutin ka
+Dm G
+Dahil sa bawat tibok, pangalan mo’y kasama
+
+[Verse 2]
+C
+Sinubukan kong kalimutan ka
+Am
+Ngunit ‘pag mata’y pumikit, ikaw pa rin sinta
+F
+Lahat ng awit, nagiging alaala
+G
+Ng ngiti mong dati kong ligaya
+
+(Repeat Pre-Chorus and Chorus)
+
+[Bridge]
+Am Em
+Baka balang araw, maintindihan mo rin
+F C/E
+Na ang tunay na pag-ibig, ‘di lilimutin
+Dm Em
+Kahit ako’y nasaktan, pipiliin ka pa rin
+F G
+Dahil sa puso ko, ikaw pa rin
+
+(Repeat Chorus)
+
+[Final Chorus]
+C
+Mahal pa rin kita, kahit di mo na ako
+Am
+Kahit sa panaginip, ako’y umaasa pa rito
+F
+Kahit tinanggihan, ‘di ko kayang limutin ka
+Dm G C
+Hanggang sa dulo ng buhay ko — mahal pa rin kita
+            </pre>
+          </div>
+
+          <div id="lyrics-english" hidden>
+            <h3>I Still Love You (English Version)</h3>
+            <pre>Intro: C Am F G x2 
+Strumming Pattern: D D U U D U
+
+[Verse 1]
+C
+I thought that maybe I had a chance
+Am
+But you ended it with just one glance
+F
+All the dreams I built for two
+G
+Faded away when I lost you
+
+[Pre-Chorus]
+Em Am
+But why is it that even now
+F G
+You’re still the one my heart allows
+
+
+[Chorus]
+C
+I still love you, though you don’t love me
+Am
+Even if your heart has set me free
+F
+Though you turned away, I can’t forget
+Dm G
+Every beat still whispers your name, no regret
+
+
+[Verse 2]
+C
+I tried my best to let you go
+Am
+But when I close my eyes, it’s you I know
+F
+Every song becomes your memory
+G
+Your smile still lives inside of me
+
+(Repeat Pre-Chorus and Chorus)
+
+[Bridge]
+Am Em
+Maybe someday, you’ll understand
+F C/E
+True love doesn’t fade, it only stands
+Dm Em
+Even in pain, I’d choose you again
+F G
+For my heart won’t change — it’s you till the end
+
+(Repeat Chorus)
+
+[Final Chorus]
+C
+I still love you, though you don’t love me
+Am
+Even in dreams, you’re all I see
+F
+Though you turned away, I can’t forget
+Dm G C
+Till my last breath, I won’t regret — I still love you
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="updates" class="tab-section" role="region" aria-labelledby="updates" hidden>
+        <h2>Updates & Gigs</h2>
+        <p>Quick Update! After polishing my song, I'll make another song in a few weeks. Stay tuned!</p>
+      </section>
+
+      <section id="contact" class="tab-section" role="region" aria-labelledby="contact" hidden>
+        <h2>Contact & Socials</h2>
+        <p>Email: <a href="mailto:chrisssss2k@gmail.com">chrisssss2k@gmail.com</a></p>
+        <p>Follow on:
+          <a href="https://www.facebook.com/Chrisssss2K" target="_blank">Facebook</a> |
+          <a href="https://www.instagram.com/chris2kofficial" target="_blank">Instagram</a> |
+          <a href="https://www.youtube.com/@chrisssss2k" target="_blank">Youtube</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Chris Lao. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

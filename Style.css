@@ -1,0 +1,142 @@
+/* Warm acoustic / paper texture vibe */
+:root{
+  --bg:#fbf6f0;
+  --card:#fffaf6;
+  --accent:#8b5e3c;
+  --muted:#7a6a63;
+  --shadow: 0 8px 24px rgba(139,94,60,0.12);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:
+    linear-gradient(180deg, rgba(139,94,60,0.04) 0%, rgba(255,255,255,0) 30%),
+    radial-gradient(1200px 600px at 10% 10%, rgba(139,94,60,0.03), transparent 15%),
+    var(--bg);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:48px 20px;
+}
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,250,246,0.95));
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:28px;
+  border:1px solid rgba(139,94,60,0.06);
+}
+
+.site-header{text-align:center;padding:18px 10px 8px;margin-bottom:18px;position:relative}
+.site-header h1{font-family: "Playfair Display", Georgia, serif;font-size:2rem;margin:0;color:var(--accent);letter-spacing:0.6px}
+.site-header .sub{display:block;font-size:0.9rem;color:var(--muted);font-weight:600;margin-top:6px}
+.site-header .tagline{margin:8px 0 0;font-size:0.95rem;color:#6c5a51}
+
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:18px 0 24px}
+nav a{text-decoration:none;color:var(--accent);background:transparent;padding:8px 14px;border-radius:999px;font-weight:600;border:1px solid rgba(139,94,60,0.08);transition:all .18s ease;box-shadow: 0 2px 6px rgba(0,0,0,0.03);font-size:0.95rem}
+nav a:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(139,94,60,0.08);background:linear-gradient(180deg, rgba(139,94,60,0.04), rgba(255,255,255,0.02))}
+
+/* active nav */
+nav a.active{
+  background: linear-gradient(90deg, rgba(139,94,60,0.12), rgba(139,94,60,0.06));
+  color: #4a2f1f;
+  box-shadow: 0 8px 18px rgba(139,94,60,0.08);
+  transform:none;
+}
+
+/* tab sections: show/hide for single-page navigation */
+.tab-section { transition: opacity .18s ease; }
+.tab-section[hidden] { display: none !important; opacity: 0; }
+.tab-section.active { display: block; opacity: 1; }
+
+section{background:var(--card);padding:18px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(139,94,60,0.03);box-shadow: 0 6px 18px rgba(0,0,0,0.03)}
+section h2{font-family:"Playfair Display", serif;color:var(--accent);margin:0 0 8px;font-size:1.25rem}
+section p{line-height:1.55;margin:0 0 10px}
+audio{width:100%;margin-top:10px;outline:none;border-radius:8px}
+.lyrics h3{margin:12px 0 6px;font-size:1rem;color:#5b4034}
+pre{white-space:pre-wrap;background:linear-gradient(180deg, rgba(230,220,210,0.4), rgba(255,255,255,0.4));padding:12px;border-radius:8px;font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:0.95rem;color:#3f2f2a;overflow:auto;box-shadow: inset 0 1px 0 rgba(255,255,255,0.4)}
+footer{text-align:center;font-size:0.9rem;color:#705a50;margin-top:8px}
+
+@media (max-width:640px){
+  .container{padding:18px}
+  .site-header h1{font-size:1.6rem}
+  nav a{padding:7px 10px;font-size:0.9rem}
+}
+
+/* Dropdown styles (nav) */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--accent);
+  border-radius: 999px;
+  transition: all .18s ease;
+  font-size: 0.95rem;
+}
+.dropdown:focus-within .dropbtn,
+.dropbtn:focus { outline: 2px solid rgba(139,94,60,0.12); outline-offset: 2px; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: var(--card);
+  min-width: 200px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 8px;
+  z-index: 100;
+  border: 1px solid rgba(139,94,60,0.06);
+}
+.dropdown-group { padding: 6px 10px; color: #5b4034; font-size: 0.85rem; }
+.dropdown-content a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+}
+.dropdown-content a:hover { background: rgba(139,94,60,0.04); transform: none; }
+
+/* show on hover (desktop) */
+.dropdown:hover .dropdown-content { display: block; }
+
+/* small screens: make dropdown-content full width and relative */
+@media (max-width:640px) {
+  .dropdown-content { position: static; min-width: auto; margin-top: 6px; display: none; }
+  .dropbtn { width: auto; }
+}
+
+/* keep existing active nav rule compatibility */
+.dropdown .dropbtn.active {
+  background: linear-gradient(90deg, rgba(139,94,60,0.12), rgba(139,94,60,0.06));
+  color: #4a2f1f;
+  box-shadow: 0 8px 18px rgba(139,94,60,0.08);
+  transform: none;
+}
+
+/* remove bullets for generated music list */
+.music-ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.music-ul li { margin: 6px 0; }
+.music-ul a.music-track {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--accent);
+}
+.music-ul a.music-track:hover {
+  background: rgba(139,94,60,0.04);
+}
