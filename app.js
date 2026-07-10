@@ -16,7 +16,9 @@
     mahal: { src: 'Mahal Pa Rin Kita.mp3', title: 'Mahal Pa Rin Kita', lang: 'tagalog' },
     pwede: { src: 'Kung Pwede Lang.mp3', title: 'Kung Pwede Lang', lang: 'tagalog' },
     still: { src: 'I Still Love You.mp3', title: 'I Still Love You', lang: 'english' },
-    could: { src: 'If Only I Could.mp3', title: 'If Only I Could', lang: 'english' }
+    could: { src: 'If Only I Could.mp3', title: 'If Only I Could', lang: 'english' },
+    salamat: { src: 'Salamat Sa'yo.mp3', title: 'Salamat Sa'yo', lang: 'tagalog' },
+    thank: { src: 'Thank You.mp3', title: 'Thank You', lang: 'english' }
   };
 
   function setActiveTab(id, pushHistory = false) {
