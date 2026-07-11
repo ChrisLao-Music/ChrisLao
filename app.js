@@ -17,7 +17,7 @@
     pwede: { src: 'Kung Pwede Lang.mp3', title: 'Kung Pwede Lang', lang: 'tagalog' },
     still: { src: 'I Still Love You.mp3', title: 'I Still Love You', lang: 'english' },
     could: { src: 'If Only I Could.mp3', title: 'If Only I Could', lang: 'english' },
-    salamat: { src: 'Salamat Sa'yo.mp3', title: 'Salamat Sa'yo', lang: 'tagalog' },
+    salamat: { src: 'Salamat Sayo.mp3', title: 'Salamat Sayo', lang: 'tagalog' },
     thank: { src: 'Thank You.mp3', title: 'Thank You', lang: 'english' }
   };
 
